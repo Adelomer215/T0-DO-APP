@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do app CodeZilla</title>
+    <!-- css links -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="sun-moon">
+        <div class="sun" id="sun">
+            <i class="fas fa-sun"></i>
+        </div>
+        <div class="moon hidden" id="moon">
+            <i class="fas fa-moon"></i>
+        </div>
+    </div>
+    <div class="container">
+        <header>
+            <div class="left">
+                <section class="toggle" id="toggle">
+                    <span class="icon"></span>
+                </section>
+            </div>
+            <form>
+                <h2>Task List</h2>
+                <label for="">New task</label>
+                <input type="text" id="add-to-do" autofocus autocomplete="off">
+                <button id="add-list">add tasks</button>
+            </form>
+        </header>
+        <section class="tasks">
+            <form>
+                <h2>tasks</h2>
+                <label for="">filter tasks</label>
+                <input type="text" id="filter-to-do"  autocomplete="off">
+                <div class="list-container">
+                    <ul class="todo-list" id="todo-list"></ul>
+                </div>
+                <button id="clear-list">clear tasks</button>
+            </form>
+        </section>
+    </div>
+    <!-- JavaScript links-->
+    <script src="main.js"></script>
+</body>
+</html>

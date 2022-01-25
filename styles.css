@@ -1,0 +1,164 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* start moon & sun */
+.sun-moon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sun i.fas.fa-sun {
+    font-size: 70px;
+    transition: var(--main-transition);
+    color: var(--sun-color);
+    margin-top: 10px;
+}
+.moon i.fas.fa-moon {
+    font-size: 70px;
+    color: var(--moon-color);
+    margin-top: 10px;
+    transition: var(--main-transition);
+}
+/* end moon & sun */
+/* start light body */
+body {
+    --body-background: #fff;
+    --sun-color: orangered;
+    --button-background: orangered;
+    --toggle-background: orangered;
+    --border-background: #000;
+    --main-transition: .9s;
+    --trash-button: green;
+    min-height: 100vh;
+    transition: background-color var(--main-transition);
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--body-background);
+}
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    border: 1px outset var(--border-background);
+    border-radius: 5px;
+}
+header,section.tasks {
+    width: 100%;
+}
+.left {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+header section.toggle {
+    width: 55px;
+    background-color: var(--toggle-background);
+    height: 25px;
+    border-radius: 160px;
+    margin-right: -15px;
+}
+header section.toggle span.icon {
+    display: block;
+    background-color: #fff;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    transform: scale(.9);
+    position: relative;
+}
+section.toggle.night span.icon {
+    left: 30px;
+}  
+h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    font-weight: 300;
+}
+input#add-to-do,
+input#filter-to-do {
+    width: 100%;
+    display: block;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #999;
+    font-size: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: transparent;
+    color: var(--text-color);
+}
+label {
+    font-weight: 100;
+    display: block;
+    text-transform: uppercase;
+}
+button {
+    align-items: center;
+    cursor: pointer;
+    padding: 15px 25px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    transition: var(--main-transition);
+    transform: scale(1);
+    color: #fff;
+    background-color: var(--button-background);
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+/* end light body */
+/* start night body */
+body.night {
+    --body-background: #292C35;
+    --moon-color: #d0d066;
+    --button-background: #d0d066;
+    --toggle-background: #d0d066;
+    --border-background: #fff;
+    --text-color: #fff;
+    --trash-button: red;
+    color: var(--text-color);
+}
+/* end night body */
+.hidden {
+    display: none;
+}
+/* start list-container */
+.item-div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    transition: var(--main-transition);
+    margin-top: 10px;
+}
+.list-container ul li {
+    margin-bottom: 10px;
+    list-style: none;
+    flex-grow: 1;
+    font-size: 2rem;
+}
+button.trash-button {
+    margin-left: 2px;
+    background-color: var(--trash-button);
+}
+i.fas.fa-check,
+i.fas.fa-trash{
+    pointer-events: none;
+}
+.completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+    background-color: #e3e2e2;
+    border-radius: 20px;
+}
+/* end list-container */
